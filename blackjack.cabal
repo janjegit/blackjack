@@ -1,0 +1,27 @@
+cabal-version:      3.0
+name:               blackjack
+version:            1.0.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             Jan
+maintainer:         gitjaheje@mailbox.org
+-- copyright:
+category:           Game
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall -Wincomplete-uni-patterns -Wno-type-defaults -Wno-unused-imports -Wno-unused-matches
+
+executable blackjack
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:
+    -- other-extensions:
+    build-depends:    base,
+                      random
+    hs-source-dirs:   src
+    default-language: Haskell2010
